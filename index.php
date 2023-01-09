@@ -26,7 +26,8 @@
           <p>Anno di uscita: <?php echo $movie->year ?></p>
           <p>Durata film in minuti: <?php echo $movie->duration ?></p>
           <p>Prezzo: <?php echo $movie->price ?> €</p>
-          <p>Genere: <?php echo $movie->genre ?></p>
+          <p>Genere: <?php echo implode(", ", $movie->genre)  ?></p>
+            
           </li>
 
           <?php if($movie->discount !== 0) { ?>
