@@ -17,11 +17,18 @@ class Movie{
         $this->duration = $_duration;
         $this->genre = $_genre;
         $this->price = $_price;
-
-        if($this->year < 1990) {
+        $this->setDiscount($_year);
+        
+        
+      }
+      public function setDiscount($year) {
+        if($year < 1990) {
             $this->discount = $this->price * 0.5;
         }
-
-
+  
+      }
+      public function getDiscount() {
+        return $this->discount;
+  
+      }
     }
-}
